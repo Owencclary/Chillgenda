@@ -12,7 +12,7 @@ app.use(cors())
 
 const { seed, resetRefreshDate, getRefreshDate, deleteAllTasks, markTasksUncomplete, register, login, submitTask, getUsersTasks, completeTask, deleteTask } = require('./controller')
 
-app.use(express.static(`${__dirname}/public`))
+app.use(express.static(`public`))
 
 app.get('/', (req, res) => {   
     res.sendFile(path.join(__dirname, '../public/index.html'))
