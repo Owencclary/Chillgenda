@@ -68,7 +68,7 @@ async function registerSubmitHandler(e) {
         showAlertMessage('Please fill out required fields', "error", "register")
     } else {
         try { 
-            const res = await axios.post('http://localhost:8000/login', bodyObj)
+            const res = await axios.post('/login', bodyObj)
             const emailRes = res.data[0]
 
             if (typeof emailRes !== 'undefined') {
@@ -86,7 +86,7 @@ async function registerSubmitHandler(e) {
                 email.value = '' 
             } else {
                 try { 
-                    await axios.post('http://localhost:8000/register', bodyObj) 
+                    await axios.post('/register', bodyObj) 
                     usersEmail = bodyObj.email
                     openHomePage()
                 } catch (err) { console.error('Error registering', err) }
@@ -108,7 +108,7 @@ async function loginSubmitHandler(e) {
         showAlertMessage('Please fill out required fields', "error", "login")
     } else {
         try {
-            const res = await axios.post('http://localhost:8000/login', bodyObj);
+            const res = await axios.post('/login', bodyObj);
 
             if (res.data === false) {
                 showAlertMessage("Invalid esername or password", "error", "login")
@@ -137,7 +137,7 @@ async function loginSubmitHandler(e) {
 async function deleteTask(task_id, date) {
 
     bodyObj = { task_id: task_id }
-    try { await axios.post(`http://localhost:8000/delete-task`, bodyObj) }
+    try { await axios.post(`/delete-task`, bodyObj) }
     catch (err) { console.log(err) }
     openHomePage()
     showAlertMessage("Task deleted Successfully", "success", "date")
@@ -146,7 +146,7 @@ async function deleteTask(task_id, date) {
 // deletes all tasks for the given date
 async function deleteAllTasks(date) {
     bodyObj = { active_date: date }
-    try { await axios.post(`http://localhost:8000/delete-all-tasks`, bodyObj) }
+    try { await axios.post(`/delete-all-tasks`, bodyObj) }
     catch (err) { console.log(err) }
     openHomePage()
 }
@@ -155,7 +155,7 @@ async function deleteAllTasks(date) {
 async function completeTask(task_id) {
 
     bodyObj = { task_id: task_id }
-    try { await axios.post(`http://localhost:8000/complete-task`, bodyObj) }
+    try { await axios.post(`/complete-task`, bodyObj) }
     catch (err) { console.log(err) }
     openHomePage()
 }
@@ -163,7 +163,7 @@ async function completeTask(task_id) {
 // Marks a task uncomplete 
 async function markTasksUncomplete(date) {
     bodyObj = { active_date: date }
-    try { await axios.post(`http://localhost:8000/mark-tasks-uncomplete`, bodyObj) }
+    try { await axios.post(`/mark-tasks-uncomplete`, bodyObj) }
     catch (err) { console.log(err) }
     openHomePage()
 }
@@ -177,7 +177,7 @@ async function submitTask() {
     if (task.value = '') {
         alert('Please enter a task')
     } else {
-        try { await axios.post(`http://localhost:8000/submit-task`, bodyObj) 
+        try { await axios.post(`/submit-task`, bodyObj) 
             openHomePage()
             toggleRefreshTaskFalse()
             showAlertMessage("Task added successfully", "success", dateToEdit) 
@@ -208,7 +208,7 @@ async function getUsersTasks(date) {
     const bodyObj = { email: usersEmail, date: date };
 
     try {
-        const response = await axios.post(`http://localhost:8000/getUsersTasks`, bodyObj);
+        const response = await axios.post(`/getUsersTasks`, bodyObj);
         const todos = response.data;
 
         if (todos.length === 0) {
@@ -484,10 +484,10 @@ async function refreshTasks(date) {
 function pollForUpdates() {
     setInterval(async () => {
         try {
-            const response = await axios.get('http://localhost:8000/refresh-check')
+            const response = await axios.get('/refresh-check')
             showAlertMessage("Schedule Updated", "success", day)
             refreshTasks(response.data)
-            axios.get('http://localhost:8000/reset-refresh-date') 
+            axios.get('/reset-refresh-date') 
         } catch (error) {
             console.error('Error checking for updates:', error.message);
         }
