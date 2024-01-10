@@ -5,6 +5,7 @@ const app = express()
 const cors = require('cors')
 require('dotenv').config()
 const {SERVER_PORT} = process.env
+const path = require('path')
 
 app.use(express.json())
 app.use(cors())
@@ -14,7 +15,7 @@ const { seed, resetRefreshDate, getRefreshDate, deleteAllTasks, markTasksUncompl
 app.use(express.static(`${__dirname}/public`))
 
 app.get('/', (req, res) => {   
-    res.sendFile(`${__dirname}/public/index.html`)
+    res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
 /*-----Calls SQL Functions-----*/
