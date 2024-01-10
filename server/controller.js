@@ -3,7 +3,15 @@ const schedule = require('node-schedule');
 require('dotenv').config()
 const {CONNECTION_STRING} = process.env
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize(CONNECTION_STRING)
+const sequelize = new Sequelize(CONNECTION_STRING,{
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
+    }
+})
 
 let refreshDate = 'null'
 
