@@ -1,0 +1,19 @@
+Data Model
+----------------------------------------------------------------
+
+
+Tasks
+-----------
+- user_id
+- users_email
+- active_date
+- tasks
+- refresh_task
+- completed 
+
+
+Users 
+-----------
+- user_id  
+- email 
+- password

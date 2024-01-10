@@ -1,0 +1,392 @@
+
+
+/*------Home Page-----*/
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap');
+
+/* all html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 100%;
+    height: 100%;
+}
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100vh; 
+}
+
+/* date title */
+#date {
+    margin-top: 40px;
+}
+ 
+/* home page contrainers */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 640px;
+    max-width: 1000px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.3 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 20px;
+    margin: 25px auto;
+}
+
+/* container titles */
+.container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+}
+header h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+  
+
+/* alert message */
+.alert-message{
+    width: 100%;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+}
+.alert-message.show{
+    display: block;
+    transform: scale(1);
+}
+.alert-message.hide{
+    display: none;
+}
+#alert {
+    position: fixed;
+    width: 275px;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* For small screens */
+@media only screen and (max-width: 530px) {
+    .container {
+        margin: 0 20px;
+        max-width: 96%;
+        min-width: 96%;
+    }
+}
+
+
+
+/*-----Login/Register-----*/
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 100%;
+    height: 100%;
+}
+
+/* login/register form format */
+.grid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+    max-width: 20rem;
+    width: 90%;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 16px 0 rgba( 31, 38, 135, 0.3 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 20px;
+    margin: 40px auto;
+}
+
+/* login h3 */
+h3 {
+    text-align: center;
+}
+
+/* profile and lock icons */
+.icons {
+    display: none;
+}
+.icon {
+    display: inline-block;
+    fill: #606468;
+    font-size: 16px;
+    font-size: 1rem;
+    height: 1em;
+    vertical-align: middle;
+    width: 1em;
+}
+
+/* register link */
+a {
+    color: #65C3C7;
+    outline: 0;
+    text-decoration: none;
+}
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+/* input fields */
+input {
+    background-image: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+/* icon to input format */
+.form__field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 14px;
+    margin: 0.875rem;
+}
+/* input format */
+.login label,
+.login input[type='text'],
+.login input[type='password'],
+.login input[type='submit'] {
+    border-radius: 0.25rem;
+    padding: 16px;
+    padding: 1rem;
+}
+.form input[type='password'],
+.form input[type='text'],
+.form input[type='submit'] {
+  width: 100%;
+}
+/* input color */
+.login input[type='password'],
+.login input[type='text'] {
+  background-color: #EFEAE5;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* icon backgrounds */
+.login label {
+  background-color: #EFEAE5;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+}
+
+/* sign in btn */
+.login input[type='submit'] {
+  background-color: #65C3C7;
+  color: #eee;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.login input[type='submit']:focus,
+.login input[type='submit']:hover {
+  background-color: #65C3C7;
+  cursor: pointer;
+}
+
+/* input and link margins */
+p {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+.text--center {
+  text-align: center;
+}
+
+/* title */
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+}
+
+/* login form link */
+#back-to-login {
+    display: inline-block;
+}
+
+
+
+/*-----Task Editor-----*/
+
+/* task repeat question mark hover */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #EFEAE5;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+
+/* Align checkboxes and labels vertically */
+.item input[type="checkbox"] {
+    display: block;
+    margin-bottom: 4px;
+}
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+
+/* Top right homepage buttons */
+.edit-tasks{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.suggest-a-task{
+    position: absolute;
+    top: 140px;
+}
+.toggle-delete .dropdown .btn {
+    padding: 12.5px; 
+}
+
+/* popup format */
+.edit-tasks ul {
+    background-color: #EFEAE5;
+}
+.edit-tasks {
+    display: inline-block;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 300px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* suggest a task background color */
+.suggest-a-task ul {
+    background-color: #EFEAE5;
+}
+
+/* popup li */
+.checkboxes {
+    background-color: #FBF7F5;
+    border-radius: 3%;
+    margin: 15px;
+}
+.item {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 8px;
+}
+.item input {
+    margin: 15px;
+}
+.item button {
+    margin-left: 14px;
+}
+.toggle-delete{
+    position: absolute;
+    top: 70px;
+}
+
+/* task input */
+#task-input {
+    width: 255px;
+}
+
+/* popup submit buttons */
+#add-task-button {
+    background-color: #65C3C7; 
+    color: #ffffff; 
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#add-task-button:hover {
+    background-color: #65C3C7;
+}
+.btn:hover {
+    background-color: #65C3C7;
+}
+.btn {
+    cursor: pointer;
+    background-color: #65C3C7;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+

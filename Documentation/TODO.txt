@@ -1,0 +1,82 @@
+TODO:
+--------------------------------
+
+BUGS
+- delete btn stops working (its something wrong with the HTML)
+
+
+ADD
+- daily notes?
+- view past daily notes?
+- Add extra details to tasks
+
+
+DONE:
+--------------------------------
+- log login/register form errors alerts
+- Task list container gets squished
+- weird purple styling (probably blue and gray mixing!!!)
+- CSS contains have extra margin space on bottom
+- divs take up space
+- display dates for sections
+- make some alert messages go away
+CSS
+- give login form a border
+- make completed tasks UI better and more rewarding
+- uncheck other checkboxes in the task suggestor
+- task editor UI/task suggestor UI
+Suggest task
+- task suggestor alert messagess
+- get a random task from an API
+- save task type
+- suggest a task UI
+- input saved task type to the API task type
+- add option to add the task?
+Delete Btn
+- add delete btn to top right corner
+- take it toggle all delete button to see
+NODE CRON
+- make node schedule functions on the backend
+- make them notify the front end with a date response
+MISC
+- Move theme_switcher code to index.js
+TASK REPEATING
+- functions to run in daily, weekly and monthyl cycles
+- mark all un deleted tasks as uncompleted
+- delete all non repeating task on repeat cycles
+- test on a 30 second repeat cycle
+BUGS
+- login page wont load
+- Why tasks are not being added
+- Tasks names are undefined
+- tasks wont update on refresh
+TASK EDITOR
+- make task check boxes change date to edit
+- link submit task to new task editor, with repeat task variable
+- make only one task editor checkbox check at once
+- Add repeat task variable, to SQL database
+DONE WITH BASIC FUNCTION
+- fix registration
+- Add alert messages
+- fix login testing
+- fix double login input
+- fix task editor
+- registration page 
+- edit task feature css formating
+- Fix having to double click to submit things
+- fix tasks not popping up in routine editor
+- Change all tasks to the routine setup
+- fix adding tasks in routine editor takes you to login form
+- File setup and code layout
+- Fix deleting taks in the HTML routine editor takes you back to homepage
+- Add the tasks to the homepage
+- delete tasks
+- submits new task
+- Planning
+- Saves tasks to user
+- Data Modeling
+- Login/Register form
+- Basic homepage and task edit buttons
+- Make tasks show up when page is loaded
+- See where date gets lots
+- fix registration 

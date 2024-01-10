@@ -1,0 +1,12 @@
+Minimun Viable Features
+----------------------------------------------------------------
+
+1. Login/Register form
+
+2. Creating tasks for day, week, month and year
+
+3. Deleting tasks
+
+4. Marking Tasks completed
+
+5. Saving and loading tasks to each users profile

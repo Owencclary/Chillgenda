@@ -1,0 +1,27 @@
+Demo Script
+
+1. Introduce youself
+
+    - name, age, where i am from, where I go to school
+
+2. Explain what I built, what I used to built it, why and how
+
+    - Explain what easy going agenda is, and its core attribute of being simple and relaxed.
+
+    - Explain why I built it, I built it from inspiration of how I use the notes app to get tasks done, how 
+    I find having a larger time window for tasks is sometimes more effective. Also how annoying over
+    complex to do lists are. 
+
+    - Explain what I used: javascript, HTML, CSS, Node.js, SQL, bored API, cron clock, external 
+    themes and external icons.
+
+    - Explain how it works and demonstrate it.
+
+    - Explain how I built it, and what I am proud of (login/register form, cron clock updating tasks, 
+    the CSS, tasks being added to the right date and saved to each user, also repeat tasks, and checkboxes)
+
+3. How I think and solve problems
+
+    - how I try to single out the root line of code causing issues with a breakpoint, and also taking
+    breaks from coding and coming back to it. Also just thinking about the logic of the code in my breaks.
+    I also love to ask for help from the internet.
