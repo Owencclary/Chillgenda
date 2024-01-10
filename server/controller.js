@@ -56,7 +56,7 @@ module.exports = {
         const { active_date } = req.body;
         sequelize.query(`
             DELETE FROM tasks
-            WHERE active_date = '${active_date}' AND refresh_task = FALSE;
+            WHERE active_date = '${active_date}' AND refresh = FALSE;
         `).then(dbRes => res.status(200).send(dbRes))
        .catch(err => console.log(err))
     },
@@ -107,7 +107,7 @@ module.exports = {
     submitTask: (req, res) => {
         const { email, task, date, refresh } = req.body;
         sequelize.query(`
-            INSERT INTO tasks (users_email, active_date, task, refresh_task, completed )
+            INSERT INTO tasks (users_email, active_date, task, refresh, completed )
             VALUES (
             '${email}',
             '${date}',
