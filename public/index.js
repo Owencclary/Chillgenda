@@ -407,7 +407,7 @@ function openLoginForm(e) {
 
     document.querySelector('.align').remove()
     document.body.innerHTML = `
-        <div id="login" class="align"></div><div class="grid"><h1> Organizer </h1><h3> Login </h3><div class="alert-message-login"></div><form class="form login">
+        <div id="login" class="align"></div><div class="grid"><h1> Chillgenda </h1><h3> Login </h3><div class="alert-message-login"></div><form class="form login">
         <div class="form__field">
             <label for="login__email"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
             <input id="login__email" type="text" name="email" class="form__input" placeholder="Email" required>
@@ -428,7 +428,7 @@ function openRegisterForm(e) {
 
     document.querySelector('.align').remove()
     document.body.innerHTML = `
-        <div id="login" class="align"></div><div class="grid"><h1> Organizer </h1><h3> Register </h3><div class="alert-message-register"></div><form class="form login">
+        <div id="login" class="align"></div><div class="grid"><h1> Chillgenda </h1><h3> Register </h3><div class="alert-message-register"></div><form class="form login">
         <div class="form__field">
             <label for="register__email"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
             <input id="register__email" type="text" name="email" class="form__input" placeholder="Email" required>
